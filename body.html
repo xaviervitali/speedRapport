@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapport speedtest.py</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url("https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+      }
+
+      #chart {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 3rem;
+        padding: 1rem;
+        margin: 1rem 0;
+        box-shadow: 0 0 10rem black;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body style="margin: auto" class="container">
+    <div
+      class="d-flex flex-column justify-content-around"
+      style="height: 100vh"
+    >
+      <h2 class="text-center">Suivi des débit Internet</h2>
+
+      <div class="text-center">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="customRadioInline1"
+            name="customRadioInline1"
+            checked
+            class="custom-control-input"
+            value="maxOfTheDay"
+          />
+          <label class="custom-control-label" for="customRadioInline1"
+            >Afficher les débit max journalier</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="customRadioInline2"
+            name="customRadioInline1"
+            class="custom-control-input"
+            value="maxOfHour"
+          />
+          <label class="custom-control-label" for="customRadioInline2"
+            >Débits globaux par heure</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="customRadioInline3"
+            name="customRadioInline1"
+            class="custom-control-input"
+            value="last24"
+          />
+          <label class="custom-control-label" for="customRadioInline3"
+            >debit Max sur 24h</label
+          >
+        </div>
+      </div>
+      <div id="chart"></div>
+      <a href="speedtest.txt" target="_blank" class="btn btn-primary"
+        >Afficher le fichier brut</a
+      >
+    </div>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="main.js"></script>
+</html>
